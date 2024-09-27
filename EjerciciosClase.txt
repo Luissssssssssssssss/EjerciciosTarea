@@ -1,0 +1,198 @@
+1-
+import java.util.Scanner;
+
+public class Ejercicio1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa tu edad: ");
+        int edad = sc.nextInt();
+        
+        if (edad > 18) {
+            System.out.println("MAYOR DE EDAD");
+        } else {
+            System.out.println("MENOR DE EDAD");
+        }
+    }
+}
+
+2-
+import java.util.Scanner;
+
+public class Ejercicio2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa el primer número: ");
+        int num1 = sc.nextInt();
+        System.out.print("Ingresa el segundo número: ");
+        int num2 = sc.nextInt();
+        
+        int suma = num1 + num2;
+        System.out.println("La suma es: " + suma);
+    }
+}
+
+3-
+import java.util.Scanner;
+
+public class Ejercicio3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa un número: ");
+        int numero = sc.nextInt();
+        
+        if (numero >= 0) {
+            System.out.println("El número es positivo.");
+        } else {
+            System.out.println("El número es negativo.");
+        }
+    }
+}
+
+4-
+import java.util.Scanner;
+
+public class Ejercicio4 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa el primer número: ");
+        int num1 = sc.nextInt();
+        System.out.print("Ingresa el segundo número: ");
+        int num2 = sc.nextInt();
+        System.out.print("Ingresa el tercer número: ");
+        int num3 = sc.nextInt();
+        
+        int mayor = num1;
+        if (num2 > mayor) {
+            mayor = num2;
+        }
+        if (num3 > mayor) {
+            mayor = num3;
+        }
+        
+        System.out.println("El número mayor es: " + mayor);
+    }
+}
+
+5-
+import java.util.Scanner;
+
+public class Ejercicio5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Ingresa el primer número: ");
+        int num1 = sc.nextInt();
+        System.out.print("Ingresa el segundo número: ");
+        int num2 = sc.nextInt();
+        System.out.print("Ingresa el tercer número: ");
+        int num3 = sc.nextInt();
+        
+        int mediano;
+        if ((num1 > num2 && num1 < num3) || (num1 > num3 && num1 < num2)) {
+            mediano = num1;
+        } else if ((num2 > num1 && num2 < num3) || (num2 > num3 && num2 < num1)) {
+            mediano = num2;
+        } else {
+            mediano = num3;
+        }
+        
+        System.out.println("El número mediano es: " + mediano);
+    }
+}
+
+6-
+public class Ejercicio6 {
+    public static void main(String[] args) {
+        for (int i = 2; i <= 100; i += 2) {
+            System.out.println(i);
+        }
+    }
+}
+
+7-
+public class Ejercicio7 {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 100; i += 2) {
+            System.out.println(i);
+        }
+    }
+}
+
+8-
+import java.util.Scanner;
+
+public class Ejercicio8 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Ingrese un número: ");
+        int num = input.nextInt();
+        
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(num + " x " + i + " = " + (num * i));
+        }
+    }
+}
+
+9-
+import java.util.Scanner;
+
+public class Ejercicio9 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Ingrese la cantidad de números: ");
+        int n = input.nextInt();
+        
+        int suma = 0;
+        for (int i = 1; i <= n; i++) {
+            System.out.print("Ingrese el número " + i + ": ");
+            int num = input.nextInt();
+            suma += num;
+        }
+        
+        double promedio = (double) suma / n;
+        System.out.println("El promedio es: " + promedio);
+    }
+}
+
+10-
+import java.util.Scanner;
+
+public class Ejercicio10 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int mayor = Integer.MIN_VALUE;
+        
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Ingrese el número " + i + ": ");
+            int num = input.nextInt();
+            if (num > mayor) {
+                mayor = num;
+            }
+        }
+        
+        System.out.println("El mayor número es: " + mayor);
+    }
+}
+
+11-
+import java.util.Scanner;
+
+public class Ejercicio11 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Ingrese una cadena de texto: ");
+        String cadena = input.nextLine().toLowerCase();
+        
+        int contadorVocales = 0;
+        for (int i = 0; i < cadena.length(); i++) {
+            char letra = cadena.charAt(i);
+            if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u') {
+                contadorVocales++;
+            }
+        }
+        
+        System.out.println("Número de vocales: " + contadorVocales);
+    }
+}
+
+
+
